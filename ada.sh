@@ -47,6 +47,8 @@ cd
 
 
 wget https://raw.githubusercontent.com/logico-dev/Xresources-themes/master/base16-google-dark.Xresources .Xresources
+
+sudo mv base16-google-dark.Xresources .Xresources
 cd st
 sudo make install 
 xrdb merge ~/.Xresources
