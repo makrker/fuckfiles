@@ -23,7 +23,8 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 
 mkdir jet 
-mv JetBrainsMono.zip ~/jet  
+mv JetBrainsMono.zip ~/jet
+cd jet/
 unzip JetBrainsMono.zip
 cd 
 sudo mkdir /usr/share/fonts/TTF
@@ -39,8 +40,9 @@ git clone https://github.com/siduck76/chadwm.git
 git clone https://github.com/phillbush/xmenu.git
 cd xmenu 
 make 
-make install 
+sudo make install 
 cd 
+
 
 
 
@@ -74,10 +76,11 @@ cd bars
 chmod +x nord.sh gruvchad.sh onedark.sh 
 
 cd
-sudo pacman -S firefox-nightly discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi xorg-server vlc 
+sudo pacman -S firefox-nightly discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi xorg-server vlc 
 
 
 
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim   nvim NormalFloat guibg=#1e222a' +PackerSync
 
+sudo pacman -Sy && sudp powerpill -Su && paru -Su
