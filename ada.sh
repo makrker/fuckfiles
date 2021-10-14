@@ -20,7 +20,7 @@ paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
 
-
+sudo pacman -S imlib2 libx11 libxinerama libxft --noconfirm
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 
 mkdir jet 
