@@ -10,6 +10,7 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 
 sudo  echo '[chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist ' >> /etc/pacman.conf
+sudo pacman -Sy
 git clone https://aur.archlinux.org/paru.git 
 cd paru 
 makepkg -Si 
@@ -27,6 +28,7 @@ mv JetBrainsMono.zip ~/jet
 cd jet/
 unzip JetBrainsMono.zip
 cd 
+sudo mkdir /usr/share/fonts
 sudo mkdir /usr/share/fonts/TTF
 sudo mv jet /usr/share/fonts/TTF
 git clone https://github.com/siduck76/st.git
