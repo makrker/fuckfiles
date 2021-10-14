@@ -90,4 +90,6 @@ gvfs-afc thunar-volman gvfs --noconfirm
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim   nvim NormalFloat guibg=#1e222a' +PackerSync
 
-sudo pacman -Sy && sudp powerpill -Su && paru -Su
+cd 
+
+sudo rm -rf st xmenu 
