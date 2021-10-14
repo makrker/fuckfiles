@@ -14,10 +14,7 @@ Include = /etc/pacman.d/chaotic-mirrorlist' >> ld
 sudo tee -a /etc/pacman.conf < ld
 
 sudo pacman -Sy
-git clone https://aur.archlinux.org/paru.git 
-cd paru 
-makepkg -Si 
-cd 
+
 paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
 
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
@@ -83,9 +80,16 @@ chmod +x nord.sh gruvchad.sh onedark.sh
 
 cd
 sudo pacman -S firefox-nightly discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi xorg-server vlc grub xorg-xinit xorg-xsetroot
-gvfs-afc thunar-volman gvfs openssh jq bc xbindkeys exa --noconfirm 
+gvfs-afc thunar-volman gvfs openssh jq bc xbindkeys exa paru --noconfirm 
 
 
+paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
+
+git clone https://github.com/abba23/spotify-adblock.git
+cd spotify-adblock
+make 
+sudo make install 
+cd 
 
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim   nvim NormalFloat guibg=#1e222a' +PackerSync
