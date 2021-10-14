@@ -30,12 +30,13 @@ cd
 sudo mkdir /usr/share/fonts/TTF
 sudo mv jet /usr/share/fonts/TTF
 git clone https://github.com/siduck76/st.git
+git clone https://github.com/siduck76/chadwm.git 
 cd st
 sudo make install 
-xrdb merge pathToXresourcesFile
-https://github.com/siduck76/st.git
 
-git clone https://github.com/siduck76/chadwm.git 
+cd
+
+
 
 git clone https://github.com/phillbush/xmenu.git
 cd xmenu 
@@ -51,8 +52,7 @@ cd
 wget https://raw.githubusercontent.com/logico-dev/Xresources-themes/master/base16-google-dark.Xresources .Xresources
 
 sudo mv base16-google-dark.Xresources .Xresources
-cd st
-sudo make install 
+
 xrdb merge ~/.Xresources
 cd 
 cd chadwm 
@@ -63,6 +63,7 @@ mv eww ~/.config
 
 cd chadwm 
 sed -i 's/sid/$USER/g' config.def.h
+sudo make install
 cd 
 
 
