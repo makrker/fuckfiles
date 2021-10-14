@@ -77,7 +77,7 @@ cd bars
 chmod +x nord.sh gruvchad.sh onedark.sh 
 
 cd
-sudo pacman -S firefox-nightly discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi xorg-server vlc grub xorg-xinit xorg-xsetroot
+sudo pacman -S firefox-nightly ungoogled-chromium discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi xorg-server vlc grub xorg-xinit xorg-xsetroot
 gvfs-afc thunar-volman gvfs openssh jq bc xbindkeys exa paru --noconfirm 
 
 
