@@ -13,9 +13,7 @@ echo '[chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist' >> ld 
 sudo tee -a /etc/pacman.conf < ld
 
-sudo pacman -Sy
-
-paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
+sudo pacman -Syyyu
 
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
@@ -90,7 +88,9 @@ cd spotify-adblock
 make 
 sudo make install 
 cd 
-
+sudo chmod a+wr /usr/share/spotify
+sudo chmod a+wr /usr/share/spotify/Apps -R
+spicetify apply
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim   nvim NormalFloat guibg=#1e222a' +PackerSync
 
