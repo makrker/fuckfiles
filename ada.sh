@@ -17,7 +17,7 @@ echo 'touch Spotify.desktop
 touch ls
 echo '[Desktop Entry]
 Type=Application
-Name=Spotify (free mod apk no root premium no virus)
+Name=Spotify free mod apk no root premium no virus
 GenericName=Music Player
 Icon=spotify-client
 TryExec=spotify
@@ -66,13 +66,6 @@ cd
 
 
 
-
-
-wget https://raw.githubusercontent.com/logico-dev/Xresources-themes/master/base16-google-dark.Xresources 
-
-sudo mv base16-google-dark.Xresources .Xresources
-
-xrdb merge ~/.Xresources
 cd 
 cd chadwm 
 sudo mv fonts /usr/share/fonts/TTF 
@@ -87,7 +80,7 @@ cd
 
 
 touch .xinitrc
-echo "exec ~/.dwm/autostart"
+echo "exec ~/.dwm/autostart" >> .xinitrc
 
 
 cd .dwm
@@ -95,6 +88,12 @@ chmod +x autostart layoutmenu.sh
 cd bars 
 chmod +x nord.sh gruvchad.sh onedark.sh 
 
+
+wget https://raw.githubusercontent.com/logico-dev/Xresources-themes/master/base16-google-dark.Xresources 
+
+sudo mv base16-google-dark.Xresources .Xresources
+
+xrdb merge ~/.Xresources
 cd
 sudo pacman -S firefox-nightly ungoogled-chromium discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi xorg-server vlc grub xorg-xinit xorg-xsetroot
 gvfs-afc thunar-volman gvfs openssh jq bc xbindkeys exa paru --noconfirm 
