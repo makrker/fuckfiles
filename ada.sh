@@ -13,8 +13,9 @@ cd
 sudo rm -rf /etc/pacman.conf
 sudo rm -rf /etc/pacman.d/mirrorlist 
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/do 
+sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/pac
 sudo mv do /etc/pacman.d/mirrorlist 
-
+sudo mv pac /etc/pacman.conf
 
 echo 'touch Spotify.desktop
 
