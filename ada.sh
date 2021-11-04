@@ -14,28 +14,10 @@ sudo rm -rf /etc/pacman.conf
 sudo rm -rf /etc/pacman.d/mirrorlist 
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/do 
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/pac
+sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/spo
 sudo mv do /etc/pacman.d/mirrorlist 
 sudo mv pac /etc/pacman.conf
-
-echo 'touch Spotify.desktop
-
-touch ls
-echo '[Desktop Entry]
-Type=Application
-Name=Spotify free mod apk no root premium no virus
-GenericName=Music Player
-Icon=spotify-client
-TryExec=spotify
-Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
-Terminal=false
-MimeType=x-scheme-handler/spotify;
-Categories=Audio;Music;Player;AudioVideo;
-StartupWMClass=spotify' >> ls
-
-
-
-sudo touch /usr/share/applications/spot.desktop
-sudo tee -a /usr/share/applications/spot.desktop < ls
+sudo mv spo /usr/share/applications/spot.desktop
 sudo chmod +x /usr/share/applications/spot.desktop
 sudo pacman -Syyyu
 
