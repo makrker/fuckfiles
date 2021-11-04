@@ -40,7 +40,10 @@ git clone https://github.com/siduck76/chadwm.git
 cd st
 sudo make install 
 
+
 cd
+
+
 
 
 
@@ -82,8 +85,7 @@ sudo mv base16-google-dark.Xresources .Xresources
 
 xrdb merge ~/.Xresources
 cd
-sudo pacman -S firefox-nightly ungoogled-chromium discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi xorg-server vlc grub xorg-xinit xorg-xsetroot
-gvfs-afc thunar-volman gvfs openssh jq bc xbindkeys exa paru --noconfirm 
+
 
 
 paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
