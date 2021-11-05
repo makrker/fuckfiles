@@ -67,10 +67,17 @@ cd chadwm
 sed -i 's/sid/$USER/g' config.def.h
 sudo make install
 cd 
+sudo touch /usr/share/xsessions/chadwm.desktop  
+touch lf
+echo '[Desktop Entry]
+Name=chadwm
+Comment=dwm made beautiful 
+Exec=/home/$USER/.dwm/autostart
+Type=Application 
+' >> lf 
 
+sudo tee -a /etc/pacman.conf < ld
 
-touch .xinitrc
-echo "exec ~/.dwm/autostart" >> .xinitrc
 
 
 cd .dwm
@@ -96,4 +103,4 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim   nvim NormalFloat gui
 
 cd 
 
-sudo rm -rf st xmenu ls ld lr
+sudo rm -rf st xmenu ls ld lr lf
