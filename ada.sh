@@ -6,10 +6,6 @@ sudo pacman -S base-devel wget unzip --noconfirm
 
 sudo rm -rf /etc/pacman.conf
 sudo rm -rf /etc/pacman.d/mirrorlist 
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm
-cd 
 
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/do 
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/pac
@@ -19,7 +15,10 @@ sudo mv pac /etc/pacman.conf
 sudo mv spo /usr/share/applications/spot.desktop
 sudo chmod +x /usr/share/applications/spot.desktop
 sudo pacman -Syyyu
-
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm
+cd 
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
 
