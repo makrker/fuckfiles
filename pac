@@ -69,9 +69,6 @@ LocalFileSigLevel = Optional
 # repo name header and Include lines. You can add preferred servers immediately
 # after the header, and they will be used before the default mirrors.
 
-[archcraft]
-SigLevel = Optional TrustAll
-Include = /etc/pacman.d/archcraft-mirrorlist
 
 #[testing]
 #Include = /etc/pacman.d/mirrorlist
