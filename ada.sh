@@ -4,14 +4,13 @@ sudo pacman -S base-devel wget unzip --noconfirm
 
 
 
+sudo rm -rf /etc/pacman.conf
+sudo rm -rf /etc/pacman.d/mirrorlist 
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm
 cd 
 
-
-sudo rm -rf /etc/pacman.conf
-sudo rm -rf /etc/pacman.d/mirrorlist 
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/do 
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/pac
 sudo wget https://raw.githubusercontent.com/makrker/fuckfiles/main/spo
@@ -78,14 +77,7 @@ chmod +x autostart layoutmenu.sh
 cd bars 
 chmod +x nord.sh gruvchad.sh onedark.sh 
 
-
-wget https://raw.githubusercontent.com/logico-dev/Xresources-themes/master/base16-google-dark.Xresources 
-
-sudo mv base16-google-dark.Xresources .Xresources
-
-xrdb merge ~/.Xresources
 cd
-
 
 
 paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
