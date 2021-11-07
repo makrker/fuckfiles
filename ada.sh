@@ -1,5 +1,5 @@
 sudo pacman -Sy 
-sudo pacman -S base-devel wget unzip --noconfirm
+sudo pacman -S base-devel wget unzip git --noconfirm
 
 
 
