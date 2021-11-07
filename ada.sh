@@ -102,7 +102,7 @@ sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
 spicetify apply
 
-git clone https://github.com/NvChad/NvChad ~/.config/nvim   nvim NormalFloat guibg=#1e222a' +PackerSync
+git clone https://github.com/NvChad/NvChad ~/.config/nvim &&  nvim NormalFloat guibg=#1e222a' +PackerSync
 
 cd 
 
