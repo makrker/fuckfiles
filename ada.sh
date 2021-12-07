@@ -27,13 +27,12 @@ sudo tee -a /etc/pacman.conf < la
 cd 
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
-
+sudo pacman -Sy paru 
 sudo pacman -S imlib2 libx11 libxinerama libxft firefox-nightly ungoogled-chromium discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi vlc grub
-gvfs-afc thunar-volman gvfs openssh jq bc xbindkeys exa paru make gcc g++ --noconfirm 
+gvfs-afc thunar-volman gvfs openssh jq bc xbindkeys exa paru make gcc g++  --noconfirm 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-
-mkdir jet 
-mv JetBrainsMono.zip ~/jet
+paru -S light-git alsa-utils pipewire pipewire-jack pipewire-jack mpd mpc maim feh xclip xprop imagemagick blueman redshift xfce4-power-manager noto-fonts-emoji nerd-fonts-fantasque-sans-mono xdg-user-dirs iproute2 iw ffmpeg 
+mv JetBrainsMono.zip ~/jet 
 cd jet/
 unzip JetBrainsMono.zip
 cd 
@@ -41,7 +40,7 @@ sudo mkdir /usr/share/fonts
 sudo mkdir /usr/share/fonts/TTF
 sudo mv jet /usr/share/fonts/TTF
 git clone https://github.com/siduck76/st.git
-git clone https://github.com/siduck76/chadwm.git 
+
 cd st
 sudo make install 
 
@@ -49,48 +48,19 @@ sudo make install
 cd
 
 
+git clone https://github.com/manilarome/the-glorious-dotfiles.git 
 
 
+cp -r the-glorious-dotfiles/config/awesome/linear $HOME/.config/awesome
+mv the-glorious-dotfiles/home/  /home/$USER
+rm -rf ~/the-glorious-dotfiles/config/awesome 
+mv ~/the-glorious-dotfiles/config ~/.config
 
 git clone https://github.com/phillbush/xmenu.git
 cd xmenu 
 make 
 sudo make install 
 cd 
-
-
-
-
-cd 
-cd chadwm 
-sudo mv fonts /usr/share/fonts/TTF 
-mv rofi ~/.config 
-mv .dwm ~/
-mv eww ~/.config
-
-cd chadwm 
-sed -i 's/sid/$USER/g' config.def.h
-sudo make install
-cd 
-sudo touch /usr/share/xsessions/chadwm.desktop  
-touch lf
-echo '[Desktop Entry]
-Name=chadwm
-Comment=dwm made beautiful 
-Exec=/home/$USER/.dwm/autostart
-Type=Application 
-' >> lf 
-
-sudo tee -a /usr/share/xsessions/chadwm.desktop  < lf
-
-
-
-cd .dwm
-chmod +x autostart layoutmenu.sh 
-cd bars 
-chmod +x nord.sh gruvchad.sh onedark.sh 
-
-cd
 
 
 paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
@@ -104,7 +74,6 @@ sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
 spicetify apply
 
-git clone https://github.com/NvChad/NvChad ~/.config/nvim &&  nvim NormalFloat guibg=#1e222a' +PackerSync
 
 cd 
 
