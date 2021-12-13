@@ -47,16 +47,29 @@ sudo make install
 
 
 cd
+git clone https://github.com/siduck/chadwm.git
+cd chadwm 
+mv .dwm ~/
+mv fonts ~/.local/share/fonts
+mv rofi eww  ~/.config 
+cd chadwm 
+sudo make install 
 
-
-
+cd 
+cd .dwm 
+chmod +x autostart 
+cd bars 
+chmod +x bars.sh
+cd themes 
+chmod +x gruvchad nord onedark 
 git clone https://github.com/phillbush/xmenu.git
 cd xmenu 
 make 
 sudo make install 
 cd 
-
-
+touch .xinitrc 
+echo "exec ~/.dwm/autostart"
+ 
 paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
 
 git clone https://github.com/abba23/spotify-adblock.git
