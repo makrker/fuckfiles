@@ -17,8 +17,9 @@ sudo mv pac /etc/pacman.conf
 sudo mv spo /usr/share/applications/spot.desktop
 sudo chmod +x /usr/share/applications/spot.desktop
 sudo pacman -Syyyu
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+
+sudo pacman-key --lsign-key FBA220DFC880C03
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm
 touch la
 echo '[chaotic-aur]
@@ -48,13 +49,6 @@ sudo make install
 cd
 
 
-git clone https://github.com/manilarome/the-glorious-dotfiles.git 
-
-
-cp -r the-glorious-dotfiles/config/awesome/linear $HOME/.config/awesome
-mv the-glorious-dotfiles/home/  /home/$USER
-rm -rf ~/the-glorious-dotfiles/config/awesome 
-mv ~/the-glorious-dotfiles/config ~/.config
 
 git clone https://github.com/phillbush/xmenu.git
 cd xmenu 
@@ -72,7 +66,7 @@ sudo make install
 cd 
 sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
-spicetify apply
+
 
 
 cd 
