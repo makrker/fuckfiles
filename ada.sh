@@ -8,9 +8,9 @@ sudo tee -a /etc/pacman.conf < la
 cd 
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
-sudo pacman -Sy paru 
+sudo pacman -Sy paru --noconfirm
 sudo pacman -S imlib2 libx11 libxinerama libxft firefox-nightly ungoogled-chromium discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi vlc grub
- thunar-volman gvfs openssh jq bc xbindkeys exa paru make gcc g++  --noconfirm 
+ thunar-volman gvfs openssh jq bc xbindkeys exa  make gcc  --noconfirm 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 
 mv JetBrainsMono.zip ~/jet 
@@ -42,6 +42,7 @@ cd bars
 chmod +x bars.sh
 cd themes 
 chmod +x gruvchad nord onedark 
+cd 
 git clone https://github.com/phillbush/xmenu.git
 cd xmenu 
 make 
@@ -50,13 +51,7 @@ cd
 touch .xinitrc 
 echo "exec ~/.dwm/autostart"
  
-paru -S  spicetify-cli android-file-transfer-linux-git pulseeffect-legacy
 
-git clone https://github.com/abba23/spotify-adblock.git
-cd spotify-adblock
-make 
-sudo make install 
-cd 
 sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
 
