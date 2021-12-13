@@ -14,7 +14,7 @@ sudo pacman -Sy paru
 sudo pacman -S imlib2 libx11 libxinerama libxft firefox-nightly ungoogled-chromium discord zoom spotify fish keepassxc baobab pavucontrol playerctl pipewire powerpill pacman-contrib feh picom maim tmux steam obs-studio lib32-mesa mesa neovim thunar rofi vlc grub
  thunar-volman gvfs openssh jq bc xbindkeys exa paru make gcc g++  --noconfirm 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-paru -S light-git alsa-utils pipewire pipewire-jack pipewire-jack mpd mpc maim feh xclip xprop imagemagick blueman redshift xfce4-power-manager noto-fonts-emoji nerd-fonts-fantasque-sans-mono xdg-user-dirs iproute2 iw ffmpeg 
+
 mv JetBrainsMono.zip ~/jet 
 cd jet/
 unzip JetBrainsMono.zip
